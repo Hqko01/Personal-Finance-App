@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:personal_finance/screens/login.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const mainApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class mainApp extends StatefulWidget {
+  const mainApp({super.key});
 
+  @override
+  State<mainApp> createState() => _mainAppState();
+}
+
+class _mainAppState extends State<mainApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+      home: LoginScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
