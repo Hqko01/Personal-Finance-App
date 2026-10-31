@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:personal_finance/core/routes/appRoutes.dart';
 
 void main() {
   runApp(
@@ -29,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   // top side
                   SizedBox(
-                    height: constraints.maxHeight * 0.45,
+                    height: constraints.maxHeight * 0.60,
                     width: double.infinity,
                     child: Center(
                       child: Text(
@@ -47,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     width: double.infinity,
                     constraints: BoxConstraints(
-                      minHeight: constraints.maxHeight * 0.55,
+                      minHeight: constraints.maxHeight * 0.40,
                     ),
                     padding: const EdgeInsets.all(28),
                     decoration: const BoxDecoration(
@@ -68,10 +69,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             fillColor: Colors.grey.shade200,
                             prefixIcon: const Icon(Icons.email),
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(48),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(48),
                               borderSide: BorderSide(color: Colors.lightBlue),
                             ),
                           ),
@@ -87,10 +88,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             fillColor: Colors.grey.shade200,
                             prefixIcon: const Icon(Icons.lock),
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(48),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(48),
                               borderSide: BorderSide(color: Colors.lightBlue),
                             ),
                           ),
@@ -103,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 50,
                           child: ElevatedButton(
                             onPressed: () {
-                              debugPrint("Giriş yapılıyor...");
+                              Navigator.pushNamed(context, AppRoutes.home);
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color.fromARGB(
@@ -114,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(48),
                               ),
                             ),
                             child: const Text(

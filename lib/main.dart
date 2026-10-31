@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_finance/core/routes/appRoutes.dart';
 import 'package:personal_finance/screens/login.dart';
 
 void main() {
@@ -18,6 +19,8 @@ class _mainAppState extends State<mainApp> {
     return const MaterialApp(
       home: LoginScreen(),
       debugShowCheckedModeBanner: false,
+      initialRoute: AppRoutes.login,
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
