@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_finance/core/routes/appRoutes.dart';
+import 'package:personal_finance/main.dart';
 
 void main() {
   runApp(
@@ -19,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 240, 255),
+      backgroundColor: mainColor,
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -66,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             hintText: "E-mail",
                             filled: true,
-                            fillColor: Colors.grey.shade200,
+                            fillColor: mainColor,
                             prefixIcon: const Icon(Icons.email),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(48),
@@ -85,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             hintText: "password",
                             filled: true,
-                            fillColor: Colors.grey.shade200,
+                            fillColor: mainColor,
                             prefixIcon: const Icon(Icons.lock),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(48),
