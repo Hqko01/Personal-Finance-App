@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:personal_finance/core/routes/appRoutes.dart';
 import 'package:personal_finance/screens/login.dart';
 
+const mainColor = Color.fromARGB(255, 255, 240, 255);
+const mainColorShadow = Color.fromARGB(255, 209, 209, 209);
 void main() {
   runApp(const mainApp());
 }
