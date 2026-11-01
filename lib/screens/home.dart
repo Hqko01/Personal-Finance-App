@@ -16,7 +16,7 @@ class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(214, 255, 255, 255),
+      backgroundColor: const Color.fromARGB(255, 255, 240, 255),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -43,7 +43,7 @@ class _homeScreenState extends State<homeScreen> {
                           borderRadius: BorderRadius.all(Radius.circular(12)),
                         ),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -54,17 +54,15 @@ class _homeScreenState extends State<homeScreen> {
                                 color: const Color.fromARGB(139, 255, 255, 255),
                               ),
                             ),
-                            const SizedBox(height: 6),
 
                             Text(
-                              "₺20,975.00",
+                              "₺7.700.00",
                               style: GoogleFonts.montserrat(
                                 fontSize: 40,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            const SizedBox(height: 6),
 
                             // Percentage increase in income compared to the previous month.
                             Row(
@@ -95,6 +93,129 @@ class _homeScreenState extends State<homeScreen> {
                             ),
                           ],
                         ),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 120,
+                      child: Row(
+                        spacing: 10,
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              padding: EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 61, 167, 138),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.south_west,
+                                    color: const Color.fromARGB(
+                                      255,
+                                      91,
+                                      252,
+                                      209,
+                                    ),
+                                    size: 20,
+                                  ),
+                                  Text(
+                                    "₺20.975.00",
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Income",
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 15,
+                                      color: const Color.fromARGB(
+                                        139,
+                                        255,
+                                        255,
+                                        255,
+                                      ),
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              padding: EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 255, 240, 255),
+                                border: Border.all(
+                                  color: const Color.fromARGB(76, 194, 50, 40),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(12),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color.fromRGBO(255, 73, 73, 0.438),
+                                    blurRadius: 2,
+                                    spreadRadius: 0,
+                                    offset: Offset(0, 0),
+                                  ),
+                                ],
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.north_east,
+                                    color: const Color.fromARGB(
+                                      255,
+                                      255,
+                                      77,
+                                      77,
+                                    ),
+                                    size: 20,
+                                  ),
+                                  Text(
+                                    "₺13.275.00",
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 20,
+                                      color: const Color.fromARGB(
+                                        255,
+                                        255,
+                                        77,
+                                        77,
+                                      ),
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Expenses",
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 15,
+                                      color: const Color.fromARGB(
+                                        92,
+                                        65,
+                                        65,
+                                        65,
+                                      ),
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
